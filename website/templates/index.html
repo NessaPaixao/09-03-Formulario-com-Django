@@ -1,0 +1,62 @@
+{% extends 'shared/layout.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <h2>cadastre seu PETISK<strong> clicando aqui </strong></h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+    <label for="nome">Nome:  
+    <input placeholder="Digite seu nome" required type="text" name="nome">
+    </label> 
+     
+     <label for="sobrenome">Sobrenome:
+     <input placeholder="Digite seu sobrenome" required type="text" name="sobrenome">
+    </label> 
+
+     <label for="data_nascimento">Data de nascimento:
+     <input placeholder="Digite sua data de nascimento" required type="date" name="data_nascimento">
+    </label> 
+
+     <label for="email">Email:
+     <input placeholder="Digite seu email" required type="text" name="email">
+    </label> 
+
+     <label for="str_cep">CEP: 
+     <input placeholder="Digite seu cep" required type="text" name="str_cep">
+    </label> 
+
+     <label for="str_numero">Numero Residencial:
+     <input placeholder="Digite o número da sua residência" required type="text" name="str_numero">
+    </label> 
+
+     <label for="complemento">Complemento: 
+     <input placeholder="Digite seu complemento" type="text" name="complemento">
+    </label> 
+
+     <label for="genero">Gênero:
+     <select name="genero" required>
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+        <option value="Outros">Outros</option>
+     </select>
+    </label> 
+
+     <label for="telefone">Telefone:
+     <input placeholder="Digite o número do seu telefone" type="text" name="telefone">
+    </label> 
+
+     <label for="celular">Celular: 
+     <input placeholder="Digite o número do seu celular" required type="text" name="celular">
+    </label> 
+
+     <label for="motivo">Motivo: 
+     <textarea name="motivo" required cols="30" rows="10"></textarea>
+    </label> 
+
+     <input type="submit" value="Cadastrar">     
+    </form>
+{% endblock %}
