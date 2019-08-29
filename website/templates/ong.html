@@ -1,0 +1,56 @@
+{% extends 'shared/layout.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>SEJA BEM VINDX AO PETISK</h1>
+    <h2><a href="/ongs">Clique para ver as ongs cadastradas</a> </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+
+    <label for="nome_responsavel">Nome do Responsável:  
+    <input placeholder="Digite seu nome" required type="text" name="nome_responsavel">
+    </label> 
+     
+     <label for="sobrenome_responsavel">Sobrenome do Responsável:
+     <input placeholder="Digite seu sobrenome" required type="text" name="sobrenome_responsavel">
+    </label> 
+
+    <label for="nome_ong">Nome da Ong:
+        <input placeholder="Digite o nome da ong" required type="text" name="nome_ong">
+    </label>
+
+     <label for="email">Email:
+     <input placeholder="Digite seu email" required type="text" name="email">
+    </label> 
+
+     <label for="str_cep">CEP: 
+     <input placeholder="Digite seu cep" required type="text" name="str_cep">
+    </label> 
+
+     <label for="str_numero">Numero Residencial:
+     <input placeholder="Digite o número da sua residência" required type="text" name="str_numero">
+    </label> 
+
+     <label for="referencia">Referência: 
+     <input placeholder="Digite sua referencia" type="text" name="referencia">
+    </label> 
+
+     <label for="telefone">Telefone:
+     <input placeholder="Digite o número do telefone" type="text" name="telefone">
+    </label> 
+
+     <label for="horario_atendimento">Horario de Atendimento: 
+     <input placeholder="Digite o horario de atendimento da sua ong" required type="text" name="horario_atendimento">
+    </label> 
+
+     <label for="observacao">Observação: 
+     <textarea name="observacao" required cols="30" rows="10"></textarea>
+    </label> 
+
+     <input type="submit" value="Cadastrar">     
+    </form>
+
+
+
+{% endblock %} 

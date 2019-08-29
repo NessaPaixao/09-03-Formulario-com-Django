@@ -65,5 +65,50 @@ class Pessoa(models.Model):
         default=True
     )
 
-    def __str__(self):
-        return self.nome + ' ' + self.sobrenome
+class Ong(models.Model):
+    nome_responsavel = models.CharField(
+        max_length=50,
+        verbose_name='nome'
+    )
+    sobrenome_responsavel = models.CharField(
+        max_length=50,
+        verbose_name='sobrenome'
+    )
+    nome_ong = models.CharField(
+        max_length=255,
+        verbose_name='nome_ong'
+    ) 
+    email = models.CharField(
+        max_length=255,
+        verbose_name='e-mail',
+        unique=True,
+        default=''
+    )
+    str_cep = models.CharField(
+        max_length=10,
+        verbose_name='CEP'
+    )
+    str_numero = models.CharField(
+        max_length=5,
+        verbose_name='número Res.'
+    )
+    referencia = models.CharField(
+        null=True,
+        blank=True,
+        max_length=255,
+        verbose_name='referencia'
+    )
+    telefone = models.CharField(
+        max_length=255,
+        verbose_name='telefone'
+    ) 
+    horario_atendimento = models.CharField(
+        max_length=255,
+        verbose_name='horario_atendimento'
+    ) 
+    observacao = models.TextField() 
+    
+    ativo = models.BooleanField(
+        default=True
+    )
+
